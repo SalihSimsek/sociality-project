@@ -1,0 +1,13 @@
+.productPage {
+  background-color: var(--bg-color);
+  min-height: 92.6vh;
+}
+
+.product_container {
+  min-height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}

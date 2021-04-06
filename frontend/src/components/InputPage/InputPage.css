@@ -1,0 +1,128 @@
+.inputPage {
+  background: var(--bg-color);
+  height: 92.6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loading {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.completed {
+  display: none;
+}
+
+.product_form {
+  height: 20rem;
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product_formInput {
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.5rem;
+  outline: none;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+}
+
+.product_formButton {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+}
+
+.dot {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  color: var(--text-color);
+  background: var(--text-color);
+  position: relative;
+  animation: dotAnim 1s infinite linear;
+}
+
+.dot::before,
+.dot::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background: var(--text-color);
+  color: var(--text-color);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.dot::before {
+  left: -1.5rem;
+  animation: dotBefore 1s infinite linear;
+}
+
+.dot::after {
+  left: 1.5rem;
+  animation: dotAfter 1s infinite linear;
+}
+
+@keyframes dotBefore {
+    0% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(1, 1.5);
+    }
+    50% {
+      transform: scale(1, 0.67);
+    }
+    75% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  
+  @keyframes dotAnim {
+    0% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1, 1.5);
+    }
+    75% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  
+  @keyframes dotAfter {
+    0% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1, 0.67);
+    }
+    75% {
+      transform: scale(1, 1.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }

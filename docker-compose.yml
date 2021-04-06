@@ -1,0 +1,22 @@
+version: "3.4"
+services:
+    ecom-back:
+        container_name: ecom-back
+        build: backend
+        environment:
+            MONGODB_CONNECTION_STRING: "mongodb://mongodb/ecommerce"
+        ports:
+            - 3001:3001
+    ecom-front:
+        container_name: ecom-front
+        build: frontend
+        ports:
+            - 3000:3000
+    mongodb:
+        image: mongo
+        ports:
+            - 27017:27017
+        volumes:
+            - ecom-app:/data/db
+volumes:
+    ecom-app:
